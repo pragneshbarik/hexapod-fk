@@ -19,6 +19,10 @@ function draw() {
     hexapod.rotateccw();
   } else if (keyIsDown(LEFT_ARROW)) {
     hexapod.rotatecw();
+  } else if (keyIsDown(32)) {
+    hexapod.increaseHeight();
+  } else if (keyIsDown(8)) {
+    hexapod.decreaseHeight();
   } else {
     hexapod.idle();
   }

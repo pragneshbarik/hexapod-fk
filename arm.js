@@ -13,6 +13,15 @@ class Arm {
 
   update(state) {
     if (state == 0) return;
+    if (state === "INCREASE_HEIGHT") {
+      this.theta_3 += 1;
+      return;
+    }
+
+    if (state === "DECREASE_HEIGHT") {
+      this.theta_3 -= 1;
+      return;
+    }
     this.theta_1 =
       state * 20 * sin(Date.now() * this.rate) - this.initAngles[0];
 

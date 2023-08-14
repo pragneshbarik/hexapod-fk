@@ -82,6 +82,18 @@ class Hexapod {
     }
   }
 
+  increaseHeight() {
+    for (let i = 0; i < 6; i++) {
+      this.arms[i].run("INCREASE_HEIGHT");
+    }
+  }
+
+  decreaseHeight() {
+    for (let i = 0; i < 6; i++) {
+      this.arms[i].run("DECREASE_HEIGHT");
+    }
+  }
+
   idle() {
     for (let i = 0; i < 6; i++) {
       this.arms[i].run(0);
