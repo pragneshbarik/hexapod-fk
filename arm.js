@@ -15,11 +15,14 @@ class Arm {
     if (state == 0) return;
     if (state === "INCREASE_HEIGHT") {
       this.theta_3 += 1;
+      this.theta_3 = this.theta_3 >= 180 ? 180 : this.theta_3;
       return;
     }
 
     if (state === "DECREASE_HEIGHT") {
       this.theta_3 -= 1;
+      this.theta_3 = this.theta_3 <= 10 ? 10 : this.theta_3;
+
       return;
     }
     this.theta_1 =
